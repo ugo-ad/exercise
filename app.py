@@ -1,7 +1,6 @@
 import secrets
 import string
 
-ff = "ghp_3efoCY6uc7FynUYA8EwRLhjvmPFxizHKVNVbNN70"
 def generate_random_github_token():
     # GitHub Personal Access Tokens start with 'ghp_' followed by 40 random characters
     prefix = "ghp_"
