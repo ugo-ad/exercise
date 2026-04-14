@@ -18,10 +18,6 @@ jobs:
 
   build-and-push:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write  # obligatoire pour pusher sur GHCR
-
     steps:
       - uses: actions/checkout@v4
 
@@ -36,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          push: ${{ github.event_name == 'push' }}  # push seulement sur merge, pas sur PR
+          push: ${{ github.event_name == 'push' }} 
           tags: |
             ghcr.io/${{ github.repository }}:latest
             ghcr.io/${{ github.repository }}:${{ github.sha }}
