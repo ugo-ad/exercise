@@ -40,3 +40,10 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}:latest
             ghcr.io/${{ github.repository }}:${{ github.sha }}
+  
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-push
+    steps:
+      - uses: actions/checkout@v5
+        run: https://api.render.com/deploy/srv-d7f1fonlk1mc73c3v33g?key=yMAMTDCJj8I
