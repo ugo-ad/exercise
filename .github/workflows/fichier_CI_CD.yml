@@ -47,4 +47,4 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Deploy to Render
-        run: https://api.render.com/deploy/srv-d7f1fonlk1mc73c3v33g?key=yMAMTDCJj8I
+        run: curl https://api.render.com/deploy/srv-d7f1fonlk1mc73c3v33g?key=yMAMTDCJj8I
