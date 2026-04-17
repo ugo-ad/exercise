@@ -7,4 +7,4 @@ services:
   web-2:
     build: .
     ports:
-      - "7531:7531"
+      - "7531:8080"
